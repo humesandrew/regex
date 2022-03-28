@@ -80,7 +80,7 @@ A character class in a regex defines a set of characters, which can be used to f
 
 # Author
 
-Thank you for reading my tutorial. For more information, visit me at: 
+Thank you, for reading my tutorial. For more information, visit me at: 
 
 [Repository](https://github.com/humesandrew/regex)
 
