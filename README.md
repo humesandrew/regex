@@ -1,9 +1,13 @@
 
-# Title (replace with your title)
+# Regular Expressions: matching an email address.
 
-Regular expressions (or "Regex") are patterns used to match character combinations in strings.  A Regex itself is a sequence of characters that defines a particular search pattern. Regex can be used to find certain patterns of characters within a string, to find and replace a character (or sequence of characters), and can be used to validate input data. For this tutorial, we will discuss how to use a regex to match email addresses.
+Regular expressions (or "regex") are patterns used to match character combinations in strings.  A regex itself is a sequence of characters that defines a particular search pattern. Regex can be used to identify certain patterns of characters within a string, to find and replace a character (or a sequence of characters), and to validate input data. For this tutorial, we will discuss how to use a regex to match email addresses.
 
-## Summary
+
+
+# Summary
+
+Please consider the following: 
 
 /^([a-z0-9_.-]+)@([\da-z.-]+).([a-z.]{2,6})$/
 
@@ -11,18 +15,19 @@ While this may look like an alien language, in this tutorial we will break down 
 
 
 
-## Table of Contents
+# Table of Contents
 
 - [Anchors](#anchors)
 - [Quantifiers](#quantifiers)
 - [Grouping Constructs](#grouping-constructs)
 - [Bracket Expressions](#bracket-expressions)
 - [Character Classes](#character-classes)
-- [The OR Operator](#the-or-operator)
-- [Flags](#flags)
-- [Character Escapes](#character-escapes)
+- [Author](#author)
+
+
 
 ## Regex Components
+
 
 ### Anchors
 
@@ -34,17 +39,19 @@ While this may look like an alien language, in this tutorial we will break down 
 
 Our regex contains both anchors, so therefore a given string must match all the given specifications exactly. If not, the stringit won't be a match.
 
+
 ### Quantifiers
 
 Quantifiers are used to communicate how many characters are expected. Quantifiers specify how many instances of a character must be present in the input for a match to be found. They often include the minimum and maximum number of characters that your regex is looking for. Our regex is using two quantifiers: + and {2,6}.
 
-The "+" quantifier in our regex (as used in the expression [a-z0-9_.-]+ above), means that any character matching the characters inside the brackets is expected to appear at least once. The second instance of our + quantifier (the expression [\da-z.-]+), means the same is true in this case. 
+The "+" quantifier in our regex (as used in the expression [a-z0-9_.-]+ above), means that any character matching the characters inside the brackets is expected to appear at least once. The second instance of our + quantifier (the expression [\da-z.-]+), means the same is true. 
 
 The "{2, 6}" quantifier in our regex specifies the lower and upper bounds of the number of characters expected. Thus, the expression [a-z.]{2,6} means that we expect 2 to 6 characters matching those inside the brackets. 
 
+
 ### Grouping Constructs
 
-Capturing an expression is accomplished with the expression ( ) in regex. Anything within the set of parentheses is taken as a single group, and it allows all the information inside to be treated as a single unit.
+Capturing an expression is accomplished with the expression "( )" in regex. Anything within the set of parentheses is taken as a single group, and it allows all the information inside to be treated as a single unit.
 
 Considering our expression (/^([a-z0-9_.-]+)@([\da-z.-]+).([a-z.]{2,6})$/), there are three unique character groups, being defined by the ( ). The groups are:
     
@@ -62,17 +69,19 @@ Since these are single units, you can think about the expression as meaning "(Un
 
 An integral piece of our regex analysis are the bracket expressions, of which we have three: [a-z0-9_.-], [\da-z.-], and [a-z.]. A bracket expression represents a single character, which can be anything as long as it is specified within the brackets. For example in our expression [a-z0-9_.-], this character will be matched by any lowercase letters from a-z, any digit from 0-9, or a period. As our quantifier "+" has no upper limit, any number of characters matching those specified within the brackets will match.
 
+
 ### Character Classes
 
 A character class in a regex defines a set of characters, which can be used to fulfil a match by matching types of characters. In our expression above, \d is used to match any digit character.
 
 
-### The OR Operator
 
-### Flags
 
-### Character Escapes
 
-## Author
+# Author
 
-A short section about the author with a link to the author's GitHub profile (replace with your information and a link to your profile)
+Thank you for reading my tutorial. For more information, visit me at: 
+
+[Repository](https://github.com/humesandrew/regex)
+
+[Email](mailto:humes.andrew@gmail.com)
